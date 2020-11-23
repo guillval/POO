@@ -3,7 +3,11 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include <stb_image_write.h>
 #include <stdexcept>
-
+#include "Figure.h"
+#include "Croix.h"
+#include "Point.h"
+#include "Rectangle.h"
+#include "Carre.h"
 //            _    _  _                     _    _           _
 //  ___  _ _ | |_ | |<_> ___  ._ _ _  ___ _| |_ | |_  ___  _| | ___
 // | . \| | || . \| || |/ | ' | ' ' |/ ._> | |  | . |/ . \/ . |<_-<
@@ -45,9 +49,10 @@ void Drawing::clearImage() {
 
 /* Set image to test */
 void Drawing::createTestImage() {
-  for (int j = 0; j < height; j++) {
-    for (int i = 0; i < width; i++) {
-      image[j * width + i] = (i + j) % 256;
-    }
-  }
+Point p(50,50); 
+Croix c(width,height,p);
+Rectangle r(width,height,p,30,20);
+Carre ca(width,height,p,30);
+image=ca.GetVector();
+ 
 }

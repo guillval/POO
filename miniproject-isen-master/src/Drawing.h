@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "Point.h"
 
 class Drawing {
 public:
@@ -15,7 +16,7 @@ private:
   void clearImage();
   void createTestImage();
 
-private:
+protected:
   const int width;
   const int height;
 

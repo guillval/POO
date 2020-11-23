@@ -2,9 +2,10 @@
 #include <string>
 
 #include "Drawing.h"
+#include "Figure.h"
 
-const int width = 300;
-const int height = 400;
+const int width = 100;
+const int height = 100;
 
 int main(int argc, char **argv) {
 
