@@ -8,7 +8,7 @@
 #include "Point.h"
 class Carre:public Figure {
 public:
-     Carre(const int h, const int w, Point c, int largeur);
+     Carre(const int h, Point c);
        
 protected: 
   

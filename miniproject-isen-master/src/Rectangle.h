@@ -8,14 +8,12 @@
 #include "Point.h"
 class Rectangle:public Figure {
 public:
-     Rectangle(const int h, const int w, Point c, int largeur, int longeur);
+     Rectangle(const int h, const int w, Point c);
        
 protected: 
   
 private:
-int largeur;
-int longueur;
 
 };
 
-#endif /* CROIX_H */
+#endif /* RECTANGLE_H */

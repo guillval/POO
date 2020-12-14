@@ -22,3 +22,24 @@ const std::vector<char>& Figure::GetVector()
 {
 return image;
 }
+
+Point Figure::GetCentre()
+{
+return centre;
+}
+
+int Figure::GetH()
+{
+return height;
+}
+
+int Figure::GetW()
+{
+return width;
+}
+
+/*int Figure::GetPointx()
+{
+int x;
+x=Get
+}*/

@@ -6,13 +6,14 @@
 
 Croix::Croix(const int h, const int l, Point c): Figure(h,l,c)
 {
+image.resize(width * height);
 
-setPoint(c.getX(),c.getY());
+centre_interne=(h+1)/2;
 for (int i = 0; i <= width; i++) {
-      setPoint(i,c.getY());
+      setPoint(i,centre_interne);
     }
 for (int j = 0; j <= height; j++){
-      setPoint(c.getX(),j);
+      setPoint(centre_interne,j);
 }
  
 }

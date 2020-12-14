@@ -4,14 +4,14 @@
 #include "Drawing.h"
 #include "Figure.h"
 
-const int width = 100;
-const int height = 100;
+const int width = 10;
+const int height = 10;
 
 int main(int argc, char **argv) {
 
-  Drawing draw(width, height);
-
-  draw.save(std::string("test_image.bmp"));
+  Drawing drawi(width, height);
+  //drawi.draw();
+  drawi.save(std::string("test_image.bmp"));
 
   return 0;
 }
