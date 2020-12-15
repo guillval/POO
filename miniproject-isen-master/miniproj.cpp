@@ -3,15 +3,17 @@
 
 #include "Drawing.h"
 #include "Figure.h"
+#include "Menu.h"
 
-const int width = 10;
-const int height = 10;
+
 
 int main(int argc, char **argv) {
 
-  Drawing drawi(width, height);
+Menu m;
+m.run();
+  //Drawing drawi(width, height);
   //drawi.draw();
-  drawi.save(std::string("test_image.bmp"));
-
+  //drawi.save(std::string("test_image.bmp"));
+ 
   return 0;
 }

@@ -16,6 +16,9 @@ public:
 
   void save(std::string filename);
   void draw();
+  std::vector<Figure*> TabFigure;
+  std::vector<int> Tabx;
+  std::vector<int>Taby;
 
 private:
   void clearImage();
@@ -24,9 +27,10 @@ private:
 protected:
   const int width;
   const int height;
-  Figure *TabFigure[10];
+  /*Figure *TabFigure[10];
   int Tabx[10];
   int Taby[10];
+  */
   std::vector<char> image;
 };
 

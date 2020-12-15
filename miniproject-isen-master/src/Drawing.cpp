@@ -3,6 +3,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include <stb_image_write.h>
 #include <stdexcept>
+#include<vector>
 #include "Figure.h"
 #include "Croix.h"
 #include "Point.h"
@@ -29,7 +30,8 @@ void Drawing::save(std::string filename) {
         "Drawing ne supporte que l'enregistrement d'images au format bmp");
   }
 
-  createTestImage();
+  //createTestImage();
+  draw();
   stbi_write_bmp(filename.c_str(), width, height, 1, image.data());
 }
 
@@ -50,8 +52,8 @@ void Drawing::clearImage() {
 /* Set image to test */
 void Drawing::createTestImage() {
 //Figure **TabFigure = new Figure*[3];
-Point p(3,3);
-Point p2(0,5);
+/*Point p(3,3);
+Point p2(0,9);
 Point p3(7,7);
 TabFigure[0]=new Carre(3,p);
 TabFigure[1]= new Rectangle(2,4,p2);
@@ -62,8 +64,8 @@ Tabx[1]=TabFigure[1]->GetH();
 Taby[1]=TabFigure[1]->GetW();
 Tabx[2]=TabFigure[2]->GetH();
 Taby[2]=TabFigure[2]->GetW();
-//image=TabFigure[2]->GetVector();
-draw();
+image=TabFigure[2]->GetVector();
+draw();*/
 
 }
 
@@ -77,28 +79,28 @@ char val;
 int actu;
 std::vector<char> imagefigure;
 
-for(int i=0; i<=2;i++)
+for(auto i=TabFigure.begin(); i<TabFigure.end();i++)
 {
   actu=0;
   x=0;
   y=0;
-  imagefigure=TabFigure[i]->GetVector();
-  cx=TabFigure[i]->centre.getX();
-  cy=TabFigure[i]->centre.getY();
-  printf("H:%d\n",cx);
+  imagefigure=TabFigure[j]->GetVector();
+  cx=TabFigure[j]->centre.getX();
+  cy=TabFigure[j]->centre.getY();
+  /*printf("H:%d\n",cx);
   printf("W:%d\n",cy);
-  printf("H:%d\n",Tabx[i]);
-  printf("W:%d\n",Taby[i]);
+  printf("H:%d\n",Tabx[j]);
+  printf("W:%d\n",Taby[j]);*/
   if(cy==0)cy=1;
   if(cx==0)cx=1;
   cpix=((height-cy)*width)+(cx-1);
   
-  for(int k=0; k<(Tabx[i]*Taby[i]); k++)
+  for(int k=0; k<(Tabx[j]*Taby[j]); k++)
   {
    actu=cpix+(width*y)+x;
-   printf("%d\n",actu);
+   //printf("%d\n",actu);
    image[actu]=imagefigure[k];
-   if(x<(Taby[i]-1))
+   if(x<(Taby[j]-1))
    {
    x++;
    }else
@@ -107,7 +109,7 @@ for(int i=0; i<=2;i++)
    y++;
    }
   }  
-  
+  j++;
 }
 
 }
