@@ -50,6 +50,7 @@ switch (m)
     case 1:{//choix editeur
         do{//affichage deuxieme menu
         system("clear");
+        cout<<"l'image mesure 100x100 les placements des figures doivent donc etre comprises entre 0 et 100"<<endl;
         cout<<"Choisissez la figure a dessiner"<<endl;
         sleep(1);
         cout<<"1. Carre"<<endl;
