@@ -1,3 +1,11 @@
+//
+//  Drawing.h
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
+
 #ifndef DRAWING_H
 #define DRAWING_H
 
@@ -27,10 +35,7 @@ private:
 protected:
   const int width;
   const int height;
-  /*Figure *TabFigure[10];
-  int Tabx[10];
-  int Taby[10];
-  */
+
   std::vector<char> image;
 };
 

@@ -1,3 +1,10 @@
+//
+//  Menu.cpp
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -67,7 +74,6 @@ switch (m)
         draw.Tabx.push_back(largeur);
         draw.Taby.push_back(largeur);
         draw.TabFigure.push_back(carre);
-        //draw.draw();
         }
         }break;
         
@@ -88,28 +94,26 @@ switch (m)
         draw.Tabx.push_back(largeur);
         draw.Taby.push_back(longueur);
         draw.TabFigure.push_back(rectangle);
-        //draw.draw();
+        
         }
         }break;
  
         case 3:{
         cout<<"Quelle largeur souhaitez vous (valeur impair)?"<<endl;
         cin>>largeur;
-        cout<<"Quelle longueur souhaitez vous (valeur impair)?"<<endl;
-        cin>>longueur;
         cout<<"choisir l abcisse du coin haut gauche"<<endl;
         cin>>centrex;
         cout<<"choisir l ordonnee du coin haut gauche"<<endl;
         cin>>centrey;
-        if((centrex+largeur>100)||(centrey+longueur>100)||(largeur %2==0)||(longueur %2==0))
+        if((centrex+largeur>100)||(centrey+largeur>100)||(largeur %2==0))
         {cout<<"Impossible de placer la figure elle dépasserait"<<endl;}
         else{
         Point p(centrex,centrey);
-        Croix *croix= new Croix(largeur,longueur,p);
+        Croix *croix= new Croix(largeur,largeur,p);
         draw.Tabx.push_back(largeur);
-        draw.Taby.push_back(longueur);
+        draw.Taby.push_back(largeur);
         draw.TabFigure.push_back(croix);
-        //draw.draw();
+        
         }
         }break;  
 

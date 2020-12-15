@@ -1,3 +1,11 @@
+//
+//  miniproj.cpp
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
+
 #include <iostream>
 #include <string>
 
@@ -11,9 +19,6 @@ int main(int argc, char **argv) {
 
 Menu m;
 m.run();
-  //Drawing drawi(width, height);
-  //drawi.draw();
-  //drawi.save(std::string("test_image.bmp"));
  
   return 0;
 }

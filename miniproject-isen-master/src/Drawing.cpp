@@ -1,3 +1,11 @@
+//
+//  Drawing.cpp
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
+
 #include "Drawing.h"
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION

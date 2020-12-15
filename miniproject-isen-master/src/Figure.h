@@ -1,3 +1,11 @@
+//
+//  Figure.h
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
+
 #ifndef FIGURE_H
 #define FIGURE_H
 
@@ -12,14 +20,13 @@ public:
     int GetH();
     int GetW();
     Point centre;
-    //int GetPointx();
-    //int GetPointy();
+
 protected: 
   Figure(const int width, const int height, Point c);
   void setPoint(int l, int h);
   const int width;
   const int height;
-  //Point centre;
+
   std::vector<char> image;
 
 };

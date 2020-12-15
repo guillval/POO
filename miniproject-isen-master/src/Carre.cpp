@@ -1,3 +1,11 @@
+//
+//  Carre.cpp
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
+
 #include<stdio.h>
 #include"Carre.h"
 
@@ -14,14 +22,4 @@ for (int j = 0; j < height; j++) {
     }
   }
 
-/*setPoint(c.getX(),c.getY());
-for (int i=c.getX() ; i <= (c.getX()+largeur); i++) {
-      setPoint(i,c.getY());
-      setPoint(i,(c.getY()+largeur));
-    }
-
-for (int j = c.getY(); j <= (c.getY()+largeur); j++){
-      setPoint(c.getX(),j);
-      setPoint((c.getX()+largeur),j);
-}*/
 }

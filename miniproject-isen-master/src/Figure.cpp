@@ -1,3 +1,11 @@
+//
+//  Figure.cpp
+//  Projet POO ISEN
+//
+//  Created by Valette Guillaume and Fantin Anthony on 13/12/2020.
+//  Copyright © 2020 Valette Guillaume and Fantin Anthony . All rights reserved.
+//
+
 #include<stdio.h>
 #include"Figure.h"
 
@@ -38,8 +46,4 @@ int Figure::GetW()
 return width;
 }
 
-/*int Figure::GetPointx()
-{
-int x;
-x=Get
-}*/
+
