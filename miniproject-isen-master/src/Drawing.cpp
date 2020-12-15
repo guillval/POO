@@ -17,6 +17,8 @@
 #include "Point.h"
 #include "Rectangle.h"
 #include "Carre.h"
+#include"Segment.h"
+
 //            _    _  _                     _    _           _
 //  ___  _ _ | |_ | |<_> ___  ._ _ _  ___ _| |_ | |_  ___  _| | ___
 // | . \| | || . \| || |/ | ' | ' ' |/ ._> | |  | . |/ . \/ . |<_-<

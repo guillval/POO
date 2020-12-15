@@ -16,7 +16,7 @@
 #include "Point.h"
 #include "Rectangle.h"
 #include "Carre.h"
-
+#include "Segment.h"
 using namespace std;
 
 void Menu::run(void)
@@ -24,6 +24,7 @@ void Menu::run(void)
 Drawing draw(100,100);
 int n=0;
 int m=0;
+int vh=0;
 int largeur=0;
 int longueur=0;
 int centrex=0;
@@ -53,7 +54,8 @@ switch (m)
         cout<<"1. Carre"<<endl;
         cout<<"2. Rectangle"<<endl;
         cout<<"3. Croix"<<endl;
-        cout<<"4. quitter"<<endl;
+        cout<<"4. Segment"<<endl;
+        cout<<"5. quitter"<<endl;
         cin>>n;
         
 
@@ -116,8 +118,32 @@ switch (m)
         
         }
         }break;  
-
         case 4:{
+        cout<<"Quelle longueur souhaitez vous ?"<<endl;
+        cin>>largeur;
+        cout<<"choisir 1.Vertical 2.Horizontal"<<endl;
+        cin>>vh;
+        cout<<"choisir l abcisse du coin haut gauche"<<endl;
+        cin>>centrex;
+        cout<<"choisir l ordonnee du coin haut gauche"<<endl;
+        cin>>centrey;
+        if((centrex+largeur>100)||(centrey+largeur>100))
+        {cout<<"Impossible de placer la figure elle dépasserait"<<endl;}
+        else{
+        Point p(centrex,centrey);
+        if(vh==1){
+        Segment *segment= new Segment(largeur,2,p);
+        draw.Tabx.push_back(largeur);
+        draw.Taby.push_back(2);
+        draw.TabFigure.push_back(segment);
+        }else{
+        Segment *segment= new Segment(largeur,2,p);
+        draw.Tabx.push_back(2);
+        draw.Taby.push_back(largeur);
+        draw.TabFigure.push_back(segment);       
+        }}
+        }break;
+        case 5:{
         cout<<"vous quittez l'édition"<<endl;
         edit=1;
         }break;    
