@@ -41,13 +41,14 @@ sleep(1);
 cout<<"**********************************************************************"<<endl;
 sleep(1);
 do{
+//lancement menu 1
   m=Menu1();
 
-
+//en fonction du retour du menu
 switch (m) 
     {
-    case 1:{
-        do{
+    case 1:{//choix editeur
+        do{//affichage deuxieme menu
         system("clear");
         cout<<"Choisissez la figure a dessiner"<<endl;
         sleep(1);
@@ -58,10 +59,10 @@ switch (m)
         cout<<"5. quitter"<<endl;
         cin>>n;
         
-
+//en fonction du choix du menu 2
         switch (n) 
         {
-        case 1:{
+        case 1:{//dessin carre
         cout<<"Quelle largeur souhaitez vous ?"<<endl;
         cin>>largeur;
         cout<<"choisir l abcisse du coin haut gauche"<<endl;
@@ -73,13 +74,14 @@ switch (m)
         else{
         Point p(centrex,centrey);
         Carre *carre= new Carre(largeur,p);
+        //ajout des coordonnes et de la figure a leurs vecteurs respectifs
         draw.Tabx.push_back(largeur);
         draw.Taby.push_back(largeur);
         draw.TabFigure.push_back(carre);
         }
         }break;
         
-        case 2:{
+        case 2:{//dessin rectangle
         cout<<"Quelle largeur souhaitez vous ?"<<endl;
         cin>>largeur;
         cout<<"Quelle longueur souhaitez vous ?"<<endl;
@@ -100,7 +102,7 @@ switch (m)
         }
         }break;
  
-        case 3:{
+        case 3:{//dessin croix
         cout<<"Quelle largeur souhaitez vous (valeur impair)?"<<endl;
         cin>>largeur;
         cout<<"choisir l abcisse du coin haut gauche"<<endl;
@@ -118,7 +120,7 @@ switch (m)
         
         }
         }break;  
-        case 4:{
+        case 4:{//dessin segment
         cout<<"Quelle longueur souhaitez vous ?"<<endl;
         cin>>largeur;
         cout<<"choisir 1.Vertical 2.Horizontal"<<endl;
@@ -143,21 +145,21 @@ switch (m)
         draw.TabFigure.push_back(segment);       
         }}
         }break;
-        case 5:{
+        case 5:{//quitter le menu edition
         cout<<"vous quittez l'édition"<<endl;
         edit=1;
         }break;    
         default:{
         cout<<"Erreur"<<endl;}
         }
-        draw.save(std::string("test_image.bmp"));
+        
         }while(edit==0);
         }break;
-    case 2:
+    case 2://Choix sauvegarde de l'image
         vide=draw.TabFigure.empty();
-        if(vide)
+        if(vide)//verification du contenu du vecteur Figure
         {cout<<"Il n'y a pas de figures a afficher"<<endl;}
-        else{
+        else{//si il n est pas vide on peut enregistrer
         draw.draw();
         draw.save(std::string("test_image.bmp"));
         cout<<"Image cree sous le nom test_image.bmp"<<endl;

@@ -16,8 +16,9 @@
 
 
 int main(int argc, char **argv) {
-
+//declaration du menu
 Menu m;
+//lancement du menu
 m.run();
  
   return 0;

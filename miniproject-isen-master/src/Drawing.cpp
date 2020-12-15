@@ -61,6 +61,7 @@ void Drawing::clearImage() {
 
 /* Set image to test */
 void Drawing::createTestImage() {
+/*code de test*/
 //Figure **TabFigure = new Figure*[3];
 /*Point p(3,3);
 Point p2(0,9);
@@ -88,7 +89,7 @@ int y=0;
 char val;
 int actu;
 std::vector<char> imagefigure;
-
+//boucle pour toute les figures du tableau de figures
 for(auto i=TabFigure.begin(); i<TabFigure.end();i++)
 {
   actu=0;
@@ -97,24 +98,30 @@ for(auto i=TabFigure.begin(); i<TabFigure.end();i++)
   imagefigure=TabFigure[j]->GetVector();
   cx=TabFigure[j]->centre.getX();
   cy=TabFigure[j]->centre.getY();
-  /*printf("H:%d\n",cx);
-  printf("W:%d\n",cy);
-  printf("H:%d\n",Tabx[j]);
-  printf("W:%d\n",Taby[j]);*/
+  /*affichage de debogage
+  cout<<"H:"<<cx<<endl;
+  cout<<"W:"<<cy<<endl;
+  cout<<"H:"<<Tabx[j]<<endl;
+  cout<<"W:"<<Taby[j]<<endl;*/
   if(cy==0)cy=1;
   if(cx==0)cx=1;
+  //calcul numéro de pixels du centre
   cpix=((height-cy)*width)+(cx-1);
-  
+  //boucle pour attribuer la valeur de tous les pixels de la figure sur l'image
   for(int k=0; k<(Tabx[j]*Taby[j]); k++)
   {
+   //calcul du pixel actuel
    actu=cpix+(width*y)+x;
-   //printf("%d\n",actu);
+   //affichage debogage
+   //cout<<actu<<endl;
+   //le pixel de l image prend la valeur du pixel de la figure correspondant
    image[actu]=imagefigure[k];
+   //si la premiere ligne de la figure n est pas terminée on continue
    if(x<(Taby[j]-1))
    {
    x++;
    }else
-   {
+   {//si la premiere ligne de la figure est terminée on passe a la suivante
    x=0;
    y++;
    }

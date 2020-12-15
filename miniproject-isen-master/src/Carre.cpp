@@ -11,11 +11,11 @@
 
 
 
-
+//déclaration constructeur Carre
 Carre::Carre(const int h, Point c):Figure(h,h,c)
 {
 image.resize(width * height);
-
+//met a blanc tout les pixel du carré
 for (int j = 0; j < height; j++) {
     for (int i = 0; i < width; i++) {
       image[j*width+i]=255;

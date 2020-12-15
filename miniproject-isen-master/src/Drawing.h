@@ -24,6 +24,7 @@ public:
 
   void save(std::string filename);
   void draw();
+  //vecteur pour tableau de figure, de coordonnees x et y du centre
   std::vector<Figure*> TabFigure;
   std::vector<int> Tabx;
   std::vector<int>Taby;
